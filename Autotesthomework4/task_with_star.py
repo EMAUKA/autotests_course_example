@@ -10,10 +10,20 @@
 # 379 --> 879
 # 15 --> 75
 # 4974 --> 7974
-
 def max_division_by_3(num):
-    # Здесь нужно написать код
-    return #new_num
+    num = str(data[i])
+    new_num = 0
+    for don in range(len(num)):
+        for don2 in range(10):
+            result = num[:don] + str(don2) + num[don+1:]
+            if int(result) > int(num) and int(result) % 3 == 0:
+                kur = 0
+                for x1 in range(len(num)):
+                    if kur < 3 and num[x1] != result[x1]:
+                        kur += 1
+                    if kur < 2 and int(result) > new_num:
+                        new_num = int(result)
+    return new_num
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 

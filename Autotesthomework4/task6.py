@@ -4,8 +4,21 @@
 # (1, 2, 3, 4, 5, 6, 7, 8, 9, 0)  => "(123) 456-7890"
 
 def create_phone_number(num_tuple):
-    # Здесь нужно написать код
-    return #str_phone
+
+    num_tuple = (data[i])
+    str_phone = '('
+    for don in range(len(num_tuple)):
+        if len(str_phone) < 4:
+            str_phone += str(num_tuple[don])
+            if len(str_phone) == 4:
+                str_phone += ') '
+        elif len(str_phone) > 6:
+            str_phone += str(num_tuple[don])
+            if len(str_phone) == 9:
+                str_phone += '-'
+        else:
+            str_phone += str(num_tuple[don])
+    return str_phone
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 

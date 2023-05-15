@@ -3,8 +3,15 @@
 # [1, 0, 1, 2, 0, 1, 3]  => [1, 1, 2, 1, 3, 0, 0]
 
 def move_zeros(lst):
-    # Здесь нужно написать код
-    return #lst
+    lst = data[i]
+    cht = 0
+    for don in lst:
+        if don == 0:
+            cht += 1
+    for don2 in range(cht):
+        lst.remove(0)
+        lst.append(0)
+    return lst
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
