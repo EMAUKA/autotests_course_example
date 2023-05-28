@@ -19,7 +19,23 @@
 
 
 def everything_for_your_cat(cats_data):
-    # Здесь нужно написать код
+    our_str = ''
+    cats_data = data[i]
+    hozaeva = {}
+    for m in cats_data:
+        hozaeva[m[2] + ' ' + m[3]] = []
+    key = list(hozaeva.keys())
+    for l in cats_data:
+        for h in key:
+            if l[2] + ' ' + l[3] == h:
+                hozaeva[h].append(l[0] + ', ' + str(l[1]))
+    for k, v in hozaeva.items():
+        cat = ''
+        for v1 in v:
+            cat += v1
+            if len(v) - 1 > v.index(v1):
+                cat += '; '
+        our_str += str(k) + ': ' + cat + '\n'
     return our_str
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ

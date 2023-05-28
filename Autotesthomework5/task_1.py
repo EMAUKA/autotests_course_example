@@ -7,7 +7,11 @@
 
 
 def letter_stat(our_str):
-    # Здесь нужно написать код
+    out_str = data[i]
+    letters_dict = {}
+    for k in out_str:
+        letters_dict[k] = out_str.count(k)
+
     return letters_dict
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ

@@ -7,7 +7,11 @@
 
 
 def repeats(our_str):
-    # Здесь нужно написать код
+    our_str = data[i]
+    new_str = ''
+    for k in range(len(our_str)):
+        new_str += our_str[k] + '_' + str(our_str[:k+1].count(our_str[k]))
+
     return new_str
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ

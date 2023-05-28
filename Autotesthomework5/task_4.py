@@ -14,7 +14,14 @@
 
 
 def scrabble(word):
-    # Здесь нужно написать код
+    big_dict = {1: 'авеёинорст', 2: 'дклмпу', 3: 'бгья', 4: 'йы', 5: 'жзхцч', 8: 'фшэю',
+                10: 'щ', 15: 'ъ'}
+    word = data[i]
+    points = 0
+    for sing in word:
+        for wor in big_dict:
+            if big_dict[wor].find(sing) != -1:
+                points += wor
     return points
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ

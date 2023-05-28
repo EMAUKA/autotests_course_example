@@ -11,7 +11,16 @@
 
 
 def to_roman(val):
-    # Здесь нужно написать код
+    chilo = {'M': 1000, 'CM': 900, 'D': 500, 'CD': 400,
+                 'C': 100, 'XC': 90, 'L': 50, 'XL': 40,
+                 'X': 10, 'IX': 9, 'V': 5, 'IV': 4, 'I': 1}
+    number = data[i]
+    roman_str = ''
+    for letter, value in chilo.items():
+        while number >= value:
+            roman_str += letter
+            number -= value
+
     return roman_str
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
